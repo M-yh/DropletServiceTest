@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>我的小滴</title>
+    <link rel="short icon" href="Resource/Resource/icon.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .MD_all_div{
+            position: relative;
+        }
+        .MD_inner_div{
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            width: 67px;
+            height: 120px;
+            margin-left: -30px;
+            margin-top:-60px;
+            text-align: center;
+        }
+        .MD_inner_div span{
+            display: block;
+        }
+        .MD_inner_div button{
+            background: rgb(32,131,204);
+            outline: medium;
+        }
+
+        .MD_Third_section_div2{
+            width: 90%;
+            background: white;
+            height: 50px;
+            line-height: 50px;
+
+            margin: 10px auto;
+            border:1px solid #dddddd;
+            border-radius:5px ;
+        }
+        .MD_Third_section_div2_left{
+            float: left;
+
+            margin: 16px 16px 10px 20px;
+
+        }
+        .MD_Third_section_div2_right{
+            float: right;
+            margin: 17px 17px 0px 10px;
+        }
+
+    </style>
+</head>
+<body>
+<!--第一部分-->
+<header>
+    <span>我的小滴</span>
+</header>
+<!--第二部分-->
+<section>
+    <div class="MD_all_div">
+        <img src="Resource/Resource/banner5.png" alt="" width="100%">
+        <div class="MD_inner_div">
+            <img src="Resource/Resource/head.png" alt="">
+            <span id="MD_userName">华杉科技</span>
+            <script>
+                document.getElementById("MD_userName").innerHTML=window.localStorage.getItem("userName");
+            </script>
+            <button  content="" value=""  onclick="btn()" id="MD_btn">退出登陆</button>
+
+         </div>
+    </div>
+</section>
+<script>
+    var btn=document.querySelector("#MD_btn");
+    btn.onclick= function () {
+
+        window.localStorage.removeItem("userName");
+        location.href="Login.html";
+    }
+</script>
+
+<!--第三部分-->
+<section>
+    <div class="MD_Third_section_div1">
+        <div class="MD_Third_section_div2">
+            <img class="MD_Third_section_div2_left" src="Resource/Resource/gr_1.png" alt="">
+            <span>我的客户</span>
+            <img class="MD_Third_section_div2_right" src="Resource/Resource/jt.png" alt="">
+        </div>
+        <div class="MD_Third_section_div2">
+            <img class="MD_Third_section_div2_left" src="Resource/Resource/gr_1.png" alt="">
+            <span>我的客户</span>
+            <img class="MD_Third_section_div2_right" src="Resource/Resource/jt.png" alt="">
+        </div>
+        <div class="MD_Third_section_div2">
+            <img class="MD_Third_section_div2_left" src="Resource/Resource/gr_1.png" alt="">
+            <span>我的客户</span>
+            <img class="MD_Third_section_div2_right" src="Resource/Resource/jt.png" alt="">
+        </div>
+        <div class="MD_Third_section_div2">
+            <img class="MD_Third_section_div2_left" src="Resource/Resource/gr_1.png" alt="">
+            <span>我的客户</span>
+            <img class="MD_Third_section_div2_right" src="Resource/Resource/jt.png" alt="">
+        </div>
+        <div class="MD_Third_section_div2">
+            <img class="MD_Third_section_div2_left" src="Resource/Resource/gr_1.png" alt="">
+            <span>我的客户</span>
+            <img class="MD_Third_section_div2_right" src="Resource/Resource/jt.png" alt="">
+        </div>
+    </div>
+</section>
+
+<!--第四部分-->
+<footer>
+    <a href="DropletService.html"><img src="Resource/Resource/nav10.png" alt=""><span>小滴服务</span></a>
+    <a href="EntrepreneurialProjectDiamond.html"><img src="Resource/Resource/nav20.png" alt=""><span>企业项目</span></li></a>
+    <a href="ServiceProcess.html"><img src="Resource/Resource/nav30.png" alt=""><span>服务流程</span></li></a>
+    <a href="PlatformMien.html"><img src="Resource/Resource/nav40.png" alt=""><span>平台风采</span></li></a>
+    <a href="MyDroplet.html"><img src="Resource/Resource/nav51.png" alt=""><span style="color: red">我的小滴</span></li></a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>登录</title>
+    <link rel="short icon" href="Resource/Resource/icon.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script type="text/javascript" src="CommonClass.js"></script>
+    <style>
+        .Login_Second {
+            position: relative;
+        }
+        .Login_Second div{
+            left: 45%;
+            top: 50px;
+            position: absolute;
+            height: 50px;
+        }
+
+        .Login_form{
+            margin: 150px 0px;
+
+        }
+        .Login_form_div1{
+            height: 100px;
+            width: 90%;
+            margin: auto;
+            border:1px solid #dddddd;
+            border-radius: 5px;
+            background: white;
+        }
+        .Login_form_div1 div{
+            border-bottom:0.5px solid #dddddd;
+            height: 50px;
+            line-height: 50px;
+        }
+        .Login_form_div1 span{
+
+            padding-left: 15px;
+            font-size: 18px;
+        }
+        .Login_form_div2 {
+            width: 90%;
+            height: 50px;
+            background: royalblue;
+            border-radius: 10px;
+            margin:20px auto;
+            text-align: center;
+        }
+
+        .Login_form_div2 input{
+            background-color: transparent;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+        }
+        input{
+            border: none;
+            outline: medium;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+<header>
+    <span>登录</span>
+</header>
+<!--第二部分-->
+<section class="Login_Second">
+    <div>
+        <img src="Resource/Resource/head.png" alt="">
+    </div>
+
+</section>
+<!--第三部分-->
+<form class="Login_form" action="">
+    <div class="Login_form_div1">
+        <div>
+            <span>账号名：</span>
+            <input type="text" id="L_account"><br>
+        </div>
+        <div>
+            <span>密码：</span>
+            <input type="password" id="L_pwd"><br>
+        </div>
+
+    </div>
+    <div class="Login_form_div2">
+        <input type="button" id="L_btn" value="登录">
+
+    </div>
+</form>
+<script>
+
+    var btn=document.querySelector("#L_btn");
+    btn.onclick=function (){
+        var userName= encodeURIComponent(document.querySelector("#L_account").value);
+        var password= encodeURIComponent(document.querySelector("#L_pwd").value);
+        // var name=document.getElementById("L_account").value;
+        // var pass=document.getElementById("L_pwd").value;
+        var par3="username=" + userName + "&pwd=" + password;
+        requestMethod('post','login',par3,function (returnStr){
+            if(returnStr=="登录成功"){
+                window.localStorage.setItem("userName", userName);
+                location.href="DropletService.html";
+            }else{
+                alert(returnStr);}
+        });
+
+
+
+    }
+
+    //直接写死用户名密码
+    // var btn = document.querySelector("#L_btn");
+    // btn.onclick = function () {
+    //     var account = encodeURIComponent(document.querySelector("#L_account").value);
+    //     var password = encodeURIComponent(document.querySelector("#L_pwd").value);
+    //     if(account=="hskj" && password=="123456"){
+    //         window.location.href="DropletService.html";
+    //     }
+    //     else{
+    //         window.location.href="http://www.huashankeji.com"
+    //     }
+    // }
+
+</script>
+</body>
+</html>

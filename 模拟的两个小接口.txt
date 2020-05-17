@@ -1,0 +1,40 @@
+baseURL：https://mockapi.eolinker.com/2ZhGVxjacb39010e6753bd9c02ee803e6e3bfeab6e8007c
+
+-----------------------------
+
+公司信息：
+    url: /aboutus
+    methods: get 
+    参数：无
+    响应：josn
+       {
+           "code": 1,   // 0失败   1成功
+           "data":{...}   // 公司信息数据
+       }
+
+-----------------------------
+
+登录：
+    url: /login
+    methods: post
+    form-data参数：username   pwd     
+    响应：json
+       {
+           "code": 1,   // 0失败   1成功
+           "data":"登录成功"   
+       }
+    form写法：<form action="xxx" enctype="multipart/form-data">...</form>
+
+   登录成功的操作 默认用户名
+        用户名:admin   密码:admin
+        用户名:hskj    密码:123456
+        用户名:test    密码:123456
+
+   登录失败：
+        用户名:aaa   密码: 123456
+        用户名:bbb    密码:123456
+        用户名:ccc    密码:123456
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>创业项目</title>
+    <link rel="short icon" href="Resource/Resource/icon.png">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<!--第一部分-->
+<header>
+    <span>创业项目</span>
+</header>
+<!--第二部分-->
+<section class="EP_Second_section">
+    <a href="EntrepreneurialProjectDiamond.html"><span>钻石创业者</span></a>
+    <a href="EntrepreneurialProjectGold.html"><span>金牌创业者</span></a>
+    <a href="EntrepreneurialProjectSilver.html" style="background: white"><span style="color: dodgerblue">银牌创业者</span></a>
+</section>
+<!--第三部分-->
+<section class="EP_Third_section">
+    <img id="jqueryImg" src="Resource/Resource/banner2.png" alt="" width="100%">
+    <script>
+        var imgNumber=1;
+        var jqueryImg=document.getElementById("jqueryImg");
+
+        function  changeImg() {
+            imgNumber++;
+            if(imgNumber>3){
+                imgNumber=1;
+            }
+            jqueryImg.src="Resource/Resource/banner-"+imgNumber+".png";
+        }
+        setInterval(changeImg,3000);
+    </script>
+    <div class="EP_Third_section_div1">
+        <h5>服务内容</h5>
+        <img src="Resource/Resource/10w_1.png" alt="" width="100%">
+        <h6>提供以上两个学院的技术支持，咨询服务，课件学习等内容</h6>
+    </div>
+    <div class="EP_Third_section_div2">
+        <h5>创业者享受的回报收益</h5>
+        <img src="Resource/Resource/10w_2.png" alt="" width="100%">
+    </div>
+</section>
+<!--第四部分-->
+<footer>
+    <a href="DropletService.html"><img src="Resource/Resource/nav10.png" alt=""><span>小滴服务</span></a>
+    <a href="EntrepreneurialProjectDiamond.html"><img src="Resource/Resource/nav21.png" alt=""><span style="color: red">企业项目</span></li></a>
+    <a href="ServiceProcess.html"><img src="Resource/Resource/nav30.png" alt=""><span>服务流程</span></li></a>
+    <a href="PlatformMien.html"><img src="Resource/Resource/nav40.png" alt=""><span>平台风采</span></li></a>
+    <a href="MyDroplet.html"><img src="Resource/Resource/nav50.png" alt=""><span>我的小滴</span></li></a>
+</footer>
+
+
+</body>
+</html>
